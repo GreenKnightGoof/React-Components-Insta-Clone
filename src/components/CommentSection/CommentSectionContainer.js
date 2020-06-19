@@ -4,14 +4,14 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
 import dummyData from "../../dummy-data";
-
+console.log(dummyData)
 const CommentSection = props => {
  let [comment, commentState] = useState(0);
 
   return (
     <div>
-      {dummyData.map((comment) => {
-
+      {dummyData.map(() => {
+        return <Comment comment={props.comments}/>
       })}
       <CommentInput />
     </div>
